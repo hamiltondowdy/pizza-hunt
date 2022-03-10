@@ -20,7 +20,7 @@ const commentController = {
           })
           .catch(err => res.json(err));
       }
-};
+},
 removeComment({ params }, res) {
     Comment.findOneAndDelete({ _id: params.commentId })
       .then(deletedComment => {
@@ -42,6 +42,6 @@ removeComment({ params }, res) {
       })
       .catch(err => res.json(err));
   }
-
+};
 
 module.exports = commentController;
